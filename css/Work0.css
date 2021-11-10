@@ -1995,9 +1995,9 @@ left: -1.1rem;
         grid-row: initial
     }
     .grid-projects article.bi {
-        grid-column: initial;
-        grid-row: initial
-    }
+    grid-column: initial;
+    grid-row: initial;
+}
 
     .grid-projects article.big .project-title {
         font-size: 1.2rem;
