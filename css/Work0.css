@@ -624,9 +624,24 @@ html {
 }
 
 ::-webkit-scrollbar {
-    width: 0
+    width: 10px
 }
 
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px grey; 
+  border-radius: 10px;
+}
+ 
+
+::-webkit-scrollbar-thumb {
+  background: rgb(0,0,0,.3); 
+  border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: grey; 
+}
 body {
     background: var(--color_background);
     color: var(--color_text);
@@ -1122,17 +1137,18 @@ section#actual-projects {
 .grid-projects article {
     position: relative;
     display: block;
+    align-content: center;
+    align-items: center;
     height: inherit;
     color: #fff;
     font-weight: 500;
     font-size: 0.6rem;
     line-height: 1.2rem;
     cursor: pointer;
-    /*
-	-webkit-box-shadow: 0 25px 50px -25px rgba(0, 0, 0, 0.3);
-	box-shadow: 0 25px 50px -25px rgba(0, 0, 0, 0.3);
-*/
-    -webkit-transition: all 0.3s ease;
+
+    -webkit-box-shadow: 0 25px 50px -25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 25px 50px -25px rgba(0, 0, 0, 0.3);
+    */ -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease
 }
 
@@ -1143,7 +1159,7 @@ section#actual-projects {
 }
 
 .grid-projects article {
-    height: 0;
+    height: 100px;
     width: 100%;
     padding-top: 100%;
     margin: 0 !important;
@@ -1715,6 +1731,7 @@ left: -1.1rem;
     }
 }
 
+/*
 @media screen and (max-width: 1679px) {
     .grid-projects .hover ul {
         display: none
@@ -1769,6 +1786,7 @@ left: -1.1rem;
         line-height: 8rem;
     }
 }
+*/
 
 @media screen and (max-width: 1024px) and (orientation: portrait) {
     html {
@@ -1872,8 +1890,18 @@ left: -1.1rem;
         gap: 4 rem;
     }
 }
-
-@media screen and (min-width: 851px) and (max-width: 1024px) {
+.grid-projects article.bi {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+/* el titulo del bi editar luego
+.grid-projects article.bi .project-title {
+        font-size: 2rem;
+    font-weight: normal;
+}
+*/
+/*min-width: 851px*/
+@media screen and (min-width: 767px) and (max-width: 1024px) {
     html {
         font-size: 17px
     }
@@ -1922,6 +1950,20 @@ left: -1.1rem;
         font-size: 0.8rem;
         line-height: 8rem;
     }
+
+    .grid-projects .hover a.link-site:before {
+
+        width: 70%;
+
+        margin: 0% 15% 0% 15%;
+    }
+
+    .grid-projects .hover a.link-site:hover:before {
+
+        width: 80%;
+        background: black;
+        margin: 0% 10% 0% 10%;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -1947,15 +1989,16 @@ left: -1.1rem;
         grid-template-columns: 100%
     }
 
+
     .grid-projects article.big {
         grid-column: initial;
         grid-row: initial
     }
 
     .grid-projects article.big .project-title {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight: bold;
-        padding: 2.5rem 1.5rem 0 1.5rem
+        padding: 1rem 1.5rem 0 1.5rem
     }
 
     .grid-projects article.big a.big-link-site {
@@ -2001,6 +2044,9 @@ left: -1.1rem;
 
 
 }
+
+/*
+
 
 @media screen and (max-width: 320px) {
     html {
@@ -2097,6 +2143,9 @@ left: -1.1rem;
     }
 
 }
+
+*/
+
 
 
 footer {
