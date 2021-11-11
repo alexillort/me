@@ -623,25 +623,28 @@ html {
     overscroll-behavior: none
 }
 
+
 ::-webkit-scrollbar {
-    width: 10px
+    width: 0px
+}
+/*
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 1px grey;
+    border-radius: 10px;
 }
 
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 1px grey; 
-  border-radius: 10px;
-}
- 
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(0,0,0,.3); 
-  border-radius: 10px;
+    background: rgb(0, 0, 0, .3);
+    border-radius: 10px;
 }
 
 
 ::-webkit-scrollbar-thumb:hover {
-  background: grey; 
+    background: grey;
 }
+*/
+
 body {
     background: var(--color_background);
     color: var(--color_text);
@@ -1328,12 +1331,12 @@ section#actual-projects {
 
 .grid-projects .hover a.link-site:before {
     content: '';
-    margin: 0% 25% 0% 25%;
+    margin: 0% 15% 0% 15%;
     position: absolute;
     border-radius: 2rem;
     display: block;
     z-index: -1;
-    width: 50%;
+    width: 70%;
     height: 100%;
     top: 0;
     left: 0;
@@ -1345,9 +1348,9 @@ section#actual-projects {
 }
 
 .grid-projects .hover a.link-site:hover:before {
-    width: 54%;
+    width: 80%;
     background: black;
-    margin: 0% 23% 0% 23%;
+    margin: 0% 10% 0% 10%;
 }
 
 .social-medias-background {
@@ -1538,6 +1541,20 @@ body.dark-theme .trello-card-container .trello-item .trello-item-progress {
     position: relative;
     display: -ms-grid;
     display: grid;
+    -ms-grid-columns: auto min-content;
+    grid-template-columns: auto -webkit-min-content;
+    grid-template-columns: auto min-content;
+    -ms-grid-rows: min-content auto;
+    grid-template-rows: -webkit-min-content auto;
+    grid-template-rows: min-content auto;
+    gap: 1rem;
+    height: 100%;
+    width: 100%;
+    padding: 1.5rem 1.5rem 3rem
+}
+
+.trello-card-container .trello-item .trello-item-content-text {
+    position: relative;
     -ms-grid-columns: auto min-content;
     grid-template-columns: auto -webkit-min-content;
     grid-template-columns: auto min-content;
@@ -1890,16 +1907,16 @@ left: -1.1rem;
         gap: 4 rem;
     }
 }
+
 .grid-projects article.bi {
     grid-column: span 2;
     grid-row: span 2;
 }
-/* el titulo del bi editar luego
+
 .grid-projects article.bi .project-title {
-        font-size: 2rem;
-    font-weight: normal;
+    font-weight: bold
 }
-*/
+
 /*min-width: 851px*/
 @media screen and (min-width: 767px) and (max-width: 1024px) {
     html {
@@ -1994,10 +2011,11 @@ left: -1.1rem;
         grid-column: initial;
         grid-row: initial
     }
+
     .grid-projects article.bi {
-    grid-column: initial;
-    grid-row: initial;
-}
+        grid-column: initial;
+        grid-row: initial;
+    }
 
     .grid-projects article.big .project-title {
         font-size: 1.2rem;
@@ -2913,4 +2931,16 @@ body.light-theme {
     --color_background: #fff;
     --color_complement: #f5f5f5;
     --color_text: #000
+}
+
+@media screen and (max-width: 767px) and (orientation: portrait) {
+    .project__specs {
+
+        grid-template-columns: 100%;
+        gap: 4 rem;
+    }
+    .who__image {
+        width: 60%;
+        height: 60%
+    }
 }
