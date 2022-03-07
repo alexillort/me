@@ -1983,7 +1983,7 @@ left: -1.1rem;
     }
 }
 
-@media screen (min-width: 300px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
     html {
         font-size: 16px
     }
@@ -2941,7 +2941,7 @@ body.light-theme {
     .project__specs {
 
         grid-template-columns: 100%;
-        gap: 1.5 rem;
+        gap: 1.5rem;
     }
     .who__image {
         width: 60%;
