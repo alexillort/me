@@ -1983,7 +1983,7 @@ left: -1.1rem;
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen (min-width: 300px) and (max-width: 767px) {
     html {
         font-size: 16px
     }
@@ -2063,8 +2063,12 @@ left: -1.1rem;
     .next-project {
         height: 20rem
     }
-
-
+  
+    
+.project__specs {
+   
+    gap: 1.5rem;
+}
 }
 
 /*
@@ -2937,10 +2941,12 @@ body.light-theme {
     .project__specs {
 
         grid-template-columns: 100%;
-        gap: 4 rem;
+        gap: 1.5 rem;
     }
     .who__image {
         width: 60%;
         height: 60%
     }
+    
+    
 }
