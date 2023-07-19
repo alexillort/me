@@ -864,11 +864,12 @@ ul {
 
 .global-menu a.active {
     text-decoration-line: line-through;
-    color: rgba(255, 255, 255, 0.5)
+    color: rgba(255, 255, 255, 0.5);        
 }
 
 .global-menu a.active:after {
     opacity: 1
+        
 }
 
 .global-menu a:after {
@@ -891,7 +892,8 @@ ul {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    margin-bottom: 15vmin
+    margin-bottom: 15vmin;
+    text-align: center
 }
 
 .global-menu__langage a,

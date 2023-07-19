@@ -76,6 +76,8 @@ a.demo--current {
 	margin: 0.25em 0;
 	transition: transform 0.3s, opacity 0.3s;
 	transition-timing-function: ease-in;
+        text-align: center
+
 }
 .global-menu__item--demo-6 {
 	transform: translateY(100%);
